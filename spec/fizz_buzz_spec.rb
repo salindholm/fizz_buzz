@@ -2,6 +2,32 @@ require './lib/fizz_buzz'
 
 describe 'fizz_buzz' do
     it 'returns 1 if number is 1' do
+        expect(fizz_buzz(1)).to eq 1
+    end
+
+    it "returns 'fizz' if number is divisble by 3" do
+        expect(fizz_buzz(3)).to eq 'fizz'
+    end
+
+    it "returns 'buzz' if number is divisble by 5" do
+        expect(fizz_buzz(5)).to eq 'buzz'
+    end
+
+    it "returns 'fizz buzz' if number is divisible by 15" do
+        expect(fizz_buzz(15)).to eq 'fizz buzz'
+    end
+
+    it "returns error message if number is 0 or less than 0" do
+        expect(fizz_buzz(-1)).to eq 'Type a number greater than 0'
+    end
+
+    it "returns error message if number is be not an integer" do
+        expect(fizz_buzz('hello')).to eq 'Type a number greater than 0'
+    end
+endrequire './lib/fizz_buzz'
+
+describe 'fizz_buzz' do
+    it 'returns 1 if number is 1' do
         expect(fizz_buzz(1)).to eq 1 
     end
     it "returns 'fizz' if number is divisible by 3" do
